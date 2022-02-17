@@ -62,6 +62,7 @@ type ProfileStatus struct {
 // +kubebuilder:subresource:status
 // +kubebuilder:storageversion
 // +kubebuilder:resource:path=profiles,scope=Cluster
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
 // Profile is the Schema for the profiles API
 type Profile struct {

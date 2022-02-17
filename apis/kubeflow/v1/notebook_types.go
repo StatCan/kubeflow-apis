@@ -59,10 +59,12 @@ type NotebookCondition struct {
 }
 
 // +genclient
+// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 // +kubebuilder:object:root=true
 // +kubebuilder:subresource:status
 // +kubebuilder:storageversion
 // +kubebuilder:resource:path=notebooks,singular=notebook,scope=Namespaced
+
 // Notebook is the Schema for the notebooks API
 type Notebook struct {
 	metav1.TypeMeta   `json:",inline"`
